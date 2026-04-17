@@ -120,14 +120,14 @@ install_ollama() {
   # Empfohlene Modelle
   echo ""
   echo -e "  ${BOLD}Empfohlene Modelle zum Starten:${NC}"
-  echo -e "  • ollama pull llama3.2        (~2 GB, schnell)"
-  echo -e "  • ollama pull gemma3:4b       (~3 GB, sehr gut)"
+  echo -e "  • ollama pull gemma4:latest   (~9 GB, sehr stark, multimodal)"
+  echo -e "  • ollama pull gemma3:4b       (~3 GB, schnell & gut)"
   echo -e "  • ollama pull mistral         (~4 GB, stark)"
 
-  read -rp "  Soll llama3.2 jetzt heruntergeladen werden? [j/N] " pull_model
+  read -rp "  Soll gemma4:latest jetzt heruntergeladen werden? (~9 GB) [j/N] " pull_model
   if [[ "$pull_model" =~ ^[jJyY]$ ]]; then
-    ollama pull llama3.2
-    ok "llama3.2 bereit"
+    ollama pull gemma4:latest
+    ok "gemma4:latest bereit"
   fi
 }
 
@@ -207,7 +207,7 @@ summary() {
   echo ""
   echo -e "  ${BOLD}Was du jetzt tun kannst:${NC}"
   echo -e "  • ${BLUE}opencode${NC}              → AI-Coding-Assistent starten"
-  echo -e "  • ${BLUE}ollama run llama3.2${NC}   → Lokales Modell im Terminal"
+  echo -e "  • ${BLUE}ollama run gemma4:latest${NC} → Lokales Modell im Terminal"
   echo -e "  • ${BLUE}https://openrouter.ai${NC} → Alle Modelle ausprobieren"
   echo -e "  • ${BLUE}~/ai-projects/deerflow${NC} → Agenten-System erkunden"
   echo ""

@@ -8,7 +8,7 @@ Automatisches Setup-Script für den schnellen Einstieg in die AI-Entwicklung auf
 |---|---|---|
 | 1 | **Homebrew** | Paket-Manager für macOS |
 | 2 | **OpenCode** | AI-Coding-Assistent im Terminal |
-| 3 | **Ollama** | Lokale AI-Modelle (Llama, Gemma, Mistral) |
+| 3 | **Ollama** | Lokale AI-Modelle (gemma4:latest empfohlen) |
 | 4 | **OpenRouter** | Zugang zu 200+ Modellen (Claude, GPT-4o, Gemini…) |
 | 5 | **DeerFlow** | Multi-Agent Research System von ByteDance |
 
@@ -44,7 +44,7 @@ chmod +x setup.sh
 
 ```bash
 # Lokales Modell im Terminal
-ollama run llama3.2
+ollama run gemma4:latest
 
 # AI-Coding-Assistent
 opencode
